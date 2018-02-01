@@ -5,8 +5,9 @@ import matplotlib.pyplot as plt
 def convertToRGB(img):
 	return cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-def show_img(img):
+def show_img(img, save=False):
 	plt.imshow(convertToRGB(img))
+	if save: plt.savefig('test.jpg')
 	plt.show()
 
 def detect_faces(f_cascade, colored_img, scaleFactor=1.2):
@@ -21,7 +22,7 @@ def main():
 	haar_face_cascade = cv2.CascadeClassifier('data/haarcascade_frontalface_alt.xml')
 	test = cv2.imread('data/test1.jpg')
 	faces_detected_img, faces = detect_faces(haar_face_cascade, test)
-	show_img(faces_detected_img)
+	show_img(faces_detected_img, True)
 
 if __name__ == '__main__':
 	main()
