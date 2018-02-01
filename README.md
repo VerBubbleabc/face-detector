@@ -10,3 +10,7 @@
 ```
 python face_detector.py
 ```
+
+## TODO
+- Build a ConvNet on top of haar to recognize faces
+- Support using commend line to fine tune the scaleFactor
