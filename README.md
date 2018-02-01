@@ -1,7 +1,7 @@
 # face-detector
 
 ## Example
-![]()
+![](https://github.com/DTennant/face-detector/blob/master/data/test.jpg?raw=true)
 
 ## Environment
 - python 2.7.13 or 3.5.2
