@@ -10,7 +10,7 @@ def show_img(img, save=False):
 	if save: plt.savefig('test.jpg')
 	plt.show()
 
-def detect_faces(f_cascade, colored_img, scaleFactor=1.2):
+def detect_faces(f_cascade, colored_img, scaleFactor=1.05):
 	img_copy = np.copy(colored_img)
 	gray = cv2.cvtColor(img_copy, cv2.COLOR_BGR2GRAY)
 	faces  =f_cascade.detectMultiScale(gray, scaleFactor=scaleFactor, minNeighbors=5)
